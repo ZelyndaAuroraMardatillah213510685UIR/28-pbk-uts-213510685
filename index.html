@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Register Kegiatan</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+<template>
+  <div>
+    <form>
+      <label for="date">Date:</label>
+      <date-picker v-model="date" id="date" :config="{ format: 'yyyy-MM-dd' }"></date-picker>
+    </form>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const date = ref('')
+    return {
+      date
+    }
+  }
+}
+</script>
